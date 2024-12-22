@@ -7,7 +7,15 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  let flatArray = [];
+  for(let elem of array){
+    if(Array.isArray(elem)){
+      for(let char of elem) flatArray.push(char);
+    } else {
+      flatArray.push(elem);
+    }
+  }
+  return flatArray;
 }
 
 
