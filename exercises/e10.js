@@ -6,11 +6,13 @@
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
   let namesContainingLetter = [];
-  for(let acc of array){
-    if(acc.name.includes(letter) || acc.name.includes(letter.toUpperCase())) namesContainingLetter.push(acc.name);
+  for (let user of array) {
+    for (let char of user.name) {
+      if (char.toLowerCase() === letter.toLowerCase())
+        namesContainingLetter.push(user.name);
+    }
   }
   return namesContainingLetter;
-
 }
 
 // === TEST YOURSELF ===

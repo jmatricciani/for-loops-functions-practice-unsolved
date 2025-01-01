@@ -5,12 +5,12 @@
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
 export function joinToString(array, separator) {
-    let join = '';
-    for(let char of array){
-        join += char + separator;
-    }
-    return join.substring(0,join.length-1);
-
+  let join = "";
+  for (let i = 0; i < array.length; i++) {
+    if (i < array.length - 1) join += array[i] + separator;
+    else join += array[i];
+  }
+  return join;
 }
 
 // === TEST YOURSELF ===

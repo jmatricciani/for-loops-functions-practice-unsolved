@@ -10,18 +10,17 @@
 // ]
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
-    let accounts = [];
-    for(let acc of array){
-        let totalDeposits = 0;
-        if(acc.deposits){
-            for(let deposit of acc.deposits){
-                totalDeposits += deposit;
-            }
-        }
-        if(totalDeposits < 2000) accounts.push(acc);
+  let accounts = [];
+  for (let acc of array) {
+    let totalDeposits = 0;
+    if (acc.deposits) {
+      for (let deposit of acc.deposits) {
+        totalDeposits += deposit;
+      }
     }
-    return accounts;
-
+    if (totalDeposits < 2000) accounts.push(acc);
+  }
+  return accounts;
 }
 
 // === TEST YOURSELF ===

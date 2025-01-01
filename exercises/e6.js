@@ -6,8 +6,8 @@
 export function getClientWithNoMoney(array) {
   // Your code goes here...
   let names = [];
-  for(let acc of array){
-    if(acc.balance === 0.0) names.push(acc.name)
+  for (let acc of array) {
+    if (acc.balance === 0.0) names.push(acc.name);
   }
   return names;
 }
